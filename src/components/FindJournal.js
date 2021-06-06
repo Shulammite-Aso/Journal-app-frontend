@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import Journal from './Journal'
+import JournalCard from './JournalCard'
 
 export default function FindJournal() {
 
   const [query, setQuery] = useState('');
-  const [journal, setJournal] = useState([]);
+  const [journal, setJournal] = useState({});
 
   const searchJournal = async (e) => {
      e.preventDefault();
@@ -15,9 +15,11 @@ export default function FindJournal() {
      try {
       const res = await fetch(url);
       const data = await res.json();
-      const contents = data[Object.keys(data)[0]];
-      console.log(contents);
-      setJournal(contents);
+      const content = data[Object.keys(data)[0]];
+      console.log(content);
+      console.log("here: ", typeof content);
+      console.log(Object.getOwnPropertyNames(content));
+      setJournal(content);
      }catch(err) {
        console.log(err);
      }
@@ -36,7 +38,7 @@ export default function FindJournal() {
         </form>
         <div className="content">
           
-            <Journal journal={journal} />
+            <JournalCard journal={journal} />
      
         </div>
           </>

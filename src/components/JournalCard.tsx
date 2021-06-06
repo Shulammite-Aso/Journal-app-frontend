@@ -1,6 +1,18 @@
 import React from 'react';
 
-export default function Journal({journal}) {
+interface Journal {
+  title: string,
+  content: string
+
+}
+
+interface JournalCardProps {
+  journal: Journal
+}
+
+
+
+const JournalCard: React.FC<JournalCardProps> = ({journal}) => {
 
     return (
         
@@ -10,3 +22,5 @@ export default function Journal({journal}) {
         </div>
     )
 }
+
+export default JournalCard;
