@@ -1,17 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FindJournal from './components/FindJournal'
+import App from './components/App'
+import {Provider} from 'react-redux'
+import {store} from './store'
 import './style.css'
 
-class Main extends React.Component {
-    render() {
-        return (
-            <div className="container">
-              <h1 className="title">React journaling App</h1>
-              <FindJournal/>
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(
+    <React.StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </React.StrictMode>,
+    document.getElementById('root')
+  );

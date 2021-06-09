@@ -1,6 +1,6 @@
 import React from 'react';
 
-interface Journal {
+export interface Journal {
   title: string,
   content: string
 
@@ -18,7 +18,7 @@ const JournalCard: React.FC<JournalCardProps> = ({journal}) => {
         
         <div className="content-area">
           <h2 className="content--title">{journal.title}</h2>
-          <p className="content--body">{journal.content}</p>
+          <div className="content--body">{journal.content}</div>
         </div>
     )
 }
