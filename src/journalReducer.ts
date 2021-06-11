@@ -13,7 +13,7 @@ export const journalReducer = (state: JournalsState = initialState, action: Acti
     switch(action.type) {
         case "ADD_JOURNAL": {
             return {
-                ...state, journals: [...state.journals, action.payload]
+                ...state, journals: [action.payload, ...state.journals]
 
             }
         }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 export interface Journal {
   title: string,
@@ -18,7 +18,7 @@ const JournalCard: React.FC<JournalCardProps> = ({journal}) => {
         
         <div className="content-area">
           <h2 className="content--title">{journal.title}</h2>
-          <div className="content--body">{journal.content}</div>
+          <div className="content--body" dangerouslySetInnerHTML={{ __html: journal.content }}/>
         </div>
     )
 }
