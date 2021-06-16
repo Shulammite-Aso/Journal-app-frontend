@@ -16,30 +16,46 @@ function App() {
       dispatch(addJournal(title, content))
     }
 
-    const changeView = () => {
-      setShowWriteView(!showWriteView);
-      setShowSearchView(!showSearchView);
+    const changeView = (chosenView: boolean) => {
+       if (!chosenView) {
+        setShowWriteView(!showWriteView);
+        setShowSearchView(!showSearchView);
+       }
+      
     }
 
 
     return (
-        <div className="container">
-            <h1 className="title">React journaling App</h1>
-            <div>
-                <button>Write</button>
-                <button>Search</button>
+        <div className="grid place-items-center text-gray-600">
+            <div className="">
+                <div className="grid place-items-center bg-primary p-1 w-screen text-white">
+                    <h1 className="text-white my-4">React journaling App</h1>
+                </div>
+
+                <div className=" ml-3 mt-6">
+                    <button className={!showWriteView ? 'px-5 py-1 focus:outline-none': 'px-5 py-1 border-b-2 border-primary focus:outline-none'} onClick={() => changeView(showWriteView)}>Write</button>
+                    <button className={!showSearchView ? 'px-5 py-1 focus:outline-none': 'px-5 py-1 border-b-2 border-primary focus:outline-none'} onClick={() => changeView(showSearchView)}>Search</button>
+                </div>
+
+                <div className="grid place-items-center p-4">
+                
+                    <div className={!showWriteView ? 'hidden': ' mt-10'}>
+                        <WrteJournal addJournal={onAddJournal}/>
+                    </div>
+
+                    <div className={!showSearchView ? 'hidden': 'block mt-10'}>
+                        <FindJournal/>
+                    </div>
+                    <div className=" mt-10 md:w-4/5 sm:w-full lg:w-3/5">
+                            {journals.map(journal => (
+                                <JournalCard journal={journal}  key={journal.title}/>
+                            ))}
+                    </div>
+                </div>
+                
             </div>
-            <div>
-                <FindJournal/>
-            </div>
-            <div>
-                <WrteJournal addJournal={onAddJournal}/>
-            </div>
-            <div>
-                {journals.map(journal => (
-                    <JournalCard journal={journal}  key={journal.title}/>
-                ))}
-            </div>
+            
+
             </div>
     )
 }

@@ -42,12 +42,12 @@ const WrteJournal: React.FC<NewJournalProps> = ({addJournal}) => {
 
     return (
         <div>
-                <h2>Make new Journal</h2>
-                <input type="text" name="title" id="" value={journalTitle} onChange={onValueChange}/>
-                <div style={{ width: 500, height: 150 }}>
-                  <div ref={quillRef} id="editor" />
+                <h2 className="italic text-xl mb-2">Make New Journal</h2>
+                <input type="text" name="title" placeholder="journal title" className="border-solid border-2 border-gray-300 py-1 pl-3 w-full rounded-full mb-4" value={journalTitle} onChange={onValueChange}/>
+                <div className="">
+                  <div ref={quillRef} id="editor" className="h-80 ql-container ql-snow"/>
                 </div>
-                <button id="submit-btn" onClick={onSubmit}>Submit</button>
+                <button id="submit-btn" className=" text-white mt-6 py-1 px-5 bg-primary rounded-full" onClick={onSubmit}>Submit</button>
         </div>
       
     )

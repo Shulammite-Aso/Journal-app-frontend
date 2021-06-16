@@ -17,7 +17,7 @@ const JournalCard: React.FC<JournalCardProps> = ({journal}) => {
     return (
         
         <div className="content-area">
-          <h2 className="content--title">{journal.title}</h2>
+          <h1 className="content--title font-bold text-xl text-center py-8">{journal.title}</h1>
           <div className="content--body" dangerouslySetInnerHTML={{ __html: journal.content }}/>
         </div>
     )
