@@ -29,7 +29,7 @@ function App() {
         <div className="grid place-items-center text-gray-600">
             <div className="">
                 <div className="grid place-items-center bg-primary p-1 w-screen text-white">
-                    <h1 className="text-white my-4">React journaling App</h1>
+                    <h1 className="text-white  sm:text-xl my-4">React journaling App</h1>
                 </div>
 
                 <div className=" ml-3 mt-6">

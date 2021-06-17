@@ -10,8 +10,12 @@ module.exports = {
       white: colors.white,
       gray: colors.trueGray,
       indigo: colors.indigo,
-      red: colors.rose,
-      yellow: colors.amber,
+    },
+    extend: {
+    width: {
+      '105': '30rem',
+      '108': '34rem'
+    }
     }
    // backgroundColor: theme => ({
    //   ...theme('colors'),

@@ -8,7 +8,6 @@ interface NewJournalProps {
 }
 
 const WrteJournal: React.FC<NewJournalProps> = ({addJournal}) => {
-    const tag = document.createElement("p");
 
     const [journalTitle, setJournalTitle] = useState("");
     const [journalContent, setJournalContent] = useState("");
