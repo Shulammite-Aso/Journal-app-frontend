@@ -11,7 +11,7 @@ Client side application of a Jounaling app.
 - [x] React-quill editor for text editing :heavy_check_mark:
 - [x] Routing with react-router :heavy_check_mark:
 - [x] Fetch data from an api endpoint :heavy_check_mark:
-- [x] A home/landing page which is a half clone of [Journey](https://journey.cloud/) :heavy_check_mark:
+- [x] A home/landing page which is a clone of [Journey](https://journey.cloud/) (in progress) :heavy_check_mark:
 - [ ] User authentications
 - [ ] Containerize with Docker
 - [ ] A supporting backend application/api and database (also underway)
