@@ -7,6 +7,7 @@ Client side application of a Jounaling app.
 - [x] Single page application with React and its ecosystem  :heavy_check_mark: 
 - [x] TypeScript for static typing  :heavy_check_mark: 
 - [x] Tailwind css for styling  :heavy_check_mark: 
+- [x] Responsive/mobile-first :heavy_check_mark:
 - [x] Redux for state management :heavy_check_mark:
 - [x] React-quill editor for text editing :heavy_check_mark:
 - [x] Routing with react-router :heavy_check_mark:
