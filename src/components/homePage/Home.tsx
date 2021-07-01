@@ -2,18 +2,23 @@ import React from 'react';
 
 function App() {
 
-    const heroImgStyle = {
-        backgroundImage: 'url("https://journey.cloud/home/devices.jpg")',
-        backgroundPosition: 'center center',
-        backgroundSize: 'contain',
-        height: '1rem'
-}
-    
+    const handleScroll = (): void => {
+        const mainSectRect: DOMRect = document.querySelector("main")!.getBoundingClientRect();
+        if (mainSectRect.top !== 0) {
+            document.querySelector("header")!.classList.add("shadow-lg"); 
+        } else {
+            document.querySelector("header")!.classList.remove("shadow-lg");
+        }
+    }
+      
+    React.useEffect(() => {
 
+    window.addEventListener("scroll", handleScroll);
+    }, []);
     
     return (
         <div className="bg-primary text-white font-display">
-            <header className="flex flex-row justify-between py-5 px-4 bg-primary text-white">
+            <header className="flex flex-row justify-between fixed py-3 px-4 bg-primary text-white w-full">
                 <div className="flex flex-row justify-center">
 
                     <a href="/">
@@ -73,7 +78,7 @@ function App() {
                                         <img className="w-4 pb-2 mr-5 inline" src="https://journey.cloud/_nuxt/img/homepage-award-android-excellence.788728a.png" alt="award"/> 
                                         <span>Excellence Award 2018</span>
                                     </div></li>
-                                    
+
                                     <li><div className="py-4 pl-6 whitespace-nowrap overflow-hidden overflow-ellipsis">
                                         <img className="w-4 pb-2 mr-5 inline" src="https://journey.cloud/_nuxt/img/homepage-award-app-store.d6f8e31.svg" alt="award"/> 
                                         <span>iOS App Store Best New Update</span>
