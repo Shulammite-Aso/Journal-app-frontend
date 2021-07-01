@@ -12,13 +12,12 @@ function App() {
     }
       
     React.useEffect(() => {
-
-    window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll", handleScroll);
     }, []);
     
     return (
         <div className="bg-primary text-white font-display">
-            <header className="flex flex-row justify-between fixed py-3 px-4 bg-primary text-white w-full">
+            <header className="flex flex-row justify-between fixed  py-3 px-4 bg-primary text-white w-full">
                 <div className="flex flex-row justify-center">
 
                     <a href="/">
@@ -31,7 +30,7 @@ function App() {
                 <a href="/app" className="text-gray-800 border-solid border border-gray-800 px-4 py-1 rounded     min-w-64"><i className="fas fa-sign-in-alt w-6 hidden sm:inline-block"></i><strong className="font-sans font-medium leading-6">Go To Web App</strong></a>
             </header>
 
-            <main className="">
+            <main className="pt-16">
                 <div className="p-4 text-center">
                     <h2 className="font-extrabold text-2xl">Sanctuary for Your Mind & Soul</h2>
                     
