@@ -23,7 +23,7 @@ module.exports = {
      },
      maxWidth: {
       '700': '700px',
-      '800': '1000px'
+      '800': '800px'
      },
      fontFamily: {
       'display': ["Whitney SSm A","Whitney SSm B","Microsoft Yahei","sans-serif"],
