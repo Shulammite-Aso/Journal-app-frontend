@@ -17,6 +17,9 @@ module.exports = {
       '105': '30rem',
       '108': '34rem'
     },
+    height: {
+      'badge': '3.2rem'
+    },
     minWidth: {
       '64': '150px',
       

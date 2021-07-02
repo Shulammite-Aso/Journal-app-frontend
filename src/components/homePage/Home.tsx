@@ -85,6 +85,27 @@ function App() {
                                 </ul>
                             </div>
                         </div>
+
+                        <div className="flex flex-col sm:flex-row mt-3">
+                            <div className="flex-1 p-3"><a href="">
+                                <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-android.svg" alt="google play badge"/>
+                            </a></div>
+                            <div className="flex-1 p-3"><a href="">
+                                <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-ios.svg" alt="App store badge"/>
+                            </a></div>
+                            <div className="flex-1 p-3"><a href="">
+                                <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-mac.svg" alt="mac app store badge"/>
+                            </a></div>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row mt-3">
+                            <div className="flex-1 p-3"><a href="">
+                                <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-snap.svg" alt="snap store badge"/>
+                            </a></div>
+                            <div className="flex-1 p-3"><a href="">
+                                <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-chrome-webstore.svg" alt="chrome web store badge"/>
+                            </a></div>
+                        </div>
                     </div>
                     
                 </div>

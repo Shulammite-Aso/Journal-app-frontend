@@ -43,9 +43,11 @@ function App() {
                         <WrteJournal addJournal={onAddJournal}/>
                     </div>
 
-                    <div className={!showSearchView ? 'hidden': 'block mt-10'}>
-                        <FindJournal/>
+                    <div className={!showSearchView ? 'hidden': 'block mt-10 md:w-4/5 sm:w-full lg:w-3/5 mx-auto mb-20'}>
+                        <FindJournal journals={journals}/>
                     </div>
+
+
                     <div className=" mt-10 md:w-4/5 sm:w-full lg:w-3/5">
                             {journals.map(journal => (
                                 <JournalCard journal={journal}  key={journal.title}/>
