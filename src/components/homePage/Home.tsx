@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { useState } from "react";
 
 function App() {
+
+    const [showPhotosView, setShowPhotosView] = useState(true);
+    const [showMapsView, setShowMapsView] = useState(false);
+    const [showCalenderView, setShowCalenderView] = useState(false);
+
+    const changeView = (chosenView: boolean) => {
+        if (!chosenView) {
+         setShowPhotosView(!showPhotosView);
+         setShowMapsView(!showMapsView);
+         setShowCalenderView(!showCalenderView)
+        }
+       
+     }
 
     const handleScroll = (): void => {
         const mainSectRect: DOMRect = document.querySelector("main")!.getBoundingClientRect();
@@ -87,27 +100,57 @@ function App() {
                         </div>
 
                         <div className="flex flex-col sm:flex-row mt-3">
-                            <div className="flex-1 p-3"><a href="">
+                            <div className="flex-1 p-3"><a href="https://play.google.com/store/apps/details?id=com.journey.app">
                                 <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-android.svg" alt="google play badge"/>
                             </a></div>
-                            <div className="flex-1 p-3"><a href="">
+                            <div className="flex-1 p-3"><a href="https://itunes.apple.com/us/app/journey-diary-journal/id1300202543">
                                 <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-ios.svg" alt="App store badge"/>
                             </a></div>
-                            <div className="flex-1 p-3"><a href="">
+                            <div className="flex-1 p-3"><a href="https://apps.apple.com/us/app/journey-diary-journal/id1300202543">
                                 <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-mac.svg" alt="mac app store badge"/>
                             </a></div>
                         </div>
 
                         <div className="flex flex-col sm:flex-row mt-3">
-                            <div className="flex-1 p-3"><a href="">
+                            <div className="flex-1 p-3"><a href="https://snapcraft.io/journey/">
                                 <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-snap.svg" alt="snap store badge"/>
                             </a></div>
-                            <div className="flex-1 p-3"><a href="">
+                            <div className="flex-1 p-3"><a href="https://chrome.google.com/webstore/detail/journey/cpdnilooeakjhhmlbliacfdimhblkmnc">
                                 <img className="h-badge mx-auto" src="https://journey.cloud/home/badge/badge-chrome-webstore.svg" alt="chrome web store badge"/>
                             </a></div>
                         </div>
                     </div>
                     
+                 </div>
+
+                <div className="mx-auto my-14 max-w-900">
+                    <h3 className="text-center font-extrabold text-xl px-3">Your Happiness At A Glance</h3>
+                    <div className="flex justify-center">
+                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showPhotosView)}>Photos</button >
+                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showMapsView)}>Maps</button >
+                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showCalenderView)}>Calender</button >
+                    </div>
+                    <div className="mt-6">
+                        <div className="flex flex-row items-center flex-wrap">
+                            <div className="lg:flex-1">
+                                <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-photos-min.png" alt="device"/>
+                            </div>
+                            <div className="lg:flex-1">
+                                <h3 className="">Photos</h3>
+                                <p className="mt-4">A wealth of memory can be stored within a single image. Look back on your fondest memories and experiences. Upload pictures, videos, gifs, and music into your journal entries with ease.</p>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-row items-center flex-wrap">
+                            <div className="lg:flex-1">
+                                <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-map-min.png" alt="device"/>
+                            </div>
+                            <div className="lg:flex-1 ">
+                                <h3 className="">Maps</h3>
+                                <p className="mt-4">Keep track of where you’ve been by tagging your locations in your entries to make a travelogue or travel journal. Google Places and Apple Maps helps you automatically tag your locations in your entries. See the media you have uploaded at specific locations in your Atlas.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </main>
         </div>

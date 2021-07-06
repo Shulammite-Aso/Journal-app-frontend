@@ -18,7 +18,8 @@ module.exports = {
       '108': '34rem'
     },
     height: {
-      'badge': '3.2rem'
+      'badge': '3.2rem',
+      'phone': '500px'
     },
     minWidth: {
       '64': '150px',
@@ -26,7 +27,8 @@ module.exports = {
      },
      maxWidth: {
       '700': '700px',
-      '800': '800px'
+      '800': '800px',
+      '900': '900px'
      },
      fontFamily: {
       'display': ["Whitney SSm A","Whitney SSm B","Microsoft Yahei","sans-serif"],
