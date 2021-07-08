@@ -1,19 +1,10 @@
 import React, { useState } from "react";
 
+import Tabs from "./Tabs"
+import Tab from "./Tabs/Tab"
+
 function App() {
 
-    const [showPhotosView, setShowPhotosView] = useState(true);
-    const [showMapsView, setShowMapsView] = useState(false);
-    const [showCalenderView, setShowCalenderView] = useState(false);
-
-    const changeView = (chosenView: boolean) => {
-        if (!chosenView) {
-         setShowPhotosView(!showPhotosView);
-         setShowMapsView(!showMapsView);
-         setShowCalenderView(!showCalenderView)
-        }
-       
-     }
 
     const handleScroll = (): void => {
         const mainSectRect: DOMRect = document.querySelector("main")!.getBoundingClientRect();
@@ -123,35 +114,44 @@ function App() {
                     
                  </div>
 
-                <div className="mx-auto my-14 max-w-900">
+                 <div className="mx-auto my-14 max-w-900">
                     <h3 className="text-center font-extrabold text-xl px-3">Your Happiness At A Glance</h3>
-                    <div className="flex justify-center">
-                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showPhotosView)}>Photos</button >
-                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showMapsView)}>Maps</button >
-                        <button className="p-4 border-b-2 border-solid border-white border-opacity-10 hover:bg-white hover:bg-opacity-5" onClick={() => changeView(showCalenderView)}>Calender</button >
-                    </div>
-                    <div className="mt-6">
-                        <div className="flex flex-row items-center flex-wrap">
-                            <div className="lg:flex-1">
-                                <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-photos-min.png" alt="device"/>
+                    <Tabs>
+                        <Tab title="Photos">
+                            <div className="flex flex-row items-center flex-wrap">
+                                <div className="lg:flex-1">
+                                    <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-photos-min.png" alt="device"/>
+                                </div>
+                                <div className="lg:flex-1">
+                                    <h3 className="font-extrabold">Photos</h3>
+                                    <p className="mt-4">A wealth of memory can be stored within a single image. Look  back   on your fondest memories and experiences. Upload pictures, videos, gifs, and  music into   your journal entries with ease.</p>
+                                </div>
                             </div>
-                            <div className="lg:flex-1">
-                                <h3 className="">Photos</h3>
-                                <p className="mt-4">A wealth of memory can be stored within a single image. Look back on your fondest memories and experiences. Upload pictures, videos, gifs, and music into your journal entries with ease.</p>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-row items-center flex-wrap">
-                            <div className="lg:flex-1">
-                                <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-map-min.png" alt="device"/>
-                            </div>
-                            <div className="lg:flex-1 ">
-                                <h3 className="">Maps</h3>
-                                <p className="mt-4">Keep track of where you’ve been by tagging your locations in your entries to make a travelogue or travel journal. Google Places and Apple Maps helps you automatically tag your locations in your entries. See the media you have uploaded at specific locations in your Atlas.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </Tab>
+                        <Tab title="Maps">
+                            <div className="flex flex-row items-center flex-wrap">
+                              <div className="lg:flex-1">
+                                  <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-map-min.png" alt="device"/>
+                              </div>
+                              <div className="lg:flex-1 ">
+                                  <h3 className="font-extrabold">Maps</h3>
+                                  <p className="mt-4">Keep track of where you’ve been by tagging your locations in your   entries to make a travelogue or travel journal. Google Places and Apple Maps helps you    automatically tag your locations in your entries. See the media you have uploaded at   specific locations in your Atlas.</p>
+                              </div>
+                          </div>
+                        </Tab>
+                        <Tab title="Calendar">
+                            <div className="flex flex-row items-center flex-wrap">
+                              <div className="lg:flex-1">
+                                  <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-calendar-min.png" alt="device"/>
+                              </div>
+                              <div className="lg:flex-1 ">
+                                  <h3 className="font-extrabold">Calendar</h3>
+                                  <p className="mt-4">Schedule out your time and plan your self-care. Use the Calendar feature to plan for the week or month and keep track of the entries you have been making.</p>
+                              </div>
+                          </div>
+                        </Tab>
+                    </Tabs>
+                 </div>
             </main>
         </div>
             
