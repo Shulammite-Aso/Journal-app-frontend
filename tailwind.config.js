@@ -33,6 +33,25 @@ module.exports = {
      fontFamily: {
       'display': ["Whitney SSm A","Whitney SSm B","Microsoft Yahei","sans-serif"],
       'body': ['Open Sans'],
+     },
+     animation: {
+      'slideone': 'slideone both 0.5s',
+      'slidetwo': 'slidetwo both 0.5s',
+      'slidethree': 'slidethree both 0.5s',
+     },
+     keyframes: {
+      slideone: {
+        '0%': { transform:  'translateX(-1000px)' },
+        '100%': { transform: 'translateX(0)' },
+      },
+      slidetwo: {
+        '0%': { transform:  'translateX(-1000px)' },
+        '100%': { transform: 'translateX(0)' },
+      },
+      slidethree: {
+        '0%': { transform:  'translateX(-1000px)' },
+        '100%': { transform: 'translateX(0)' },
+      }
      }
     }
    // backgroundColor: theme => ({

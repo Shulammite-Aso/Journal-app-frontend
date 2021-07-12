@@ -118,33 +118,33 @@ function App() {
                     <h3 className="font-extrabold text-xl px-3">Your Happiness At A Glance</h3>
                     <Tabs>
                         <Tab title="Photos">
-                            <div className="flex flex-row items-center flex-wrap">
-                                <div className="lg:flex-1 mx-auto">
+                            <div className="flex flex-row items-center flex-wrap animate-slideone">
+                                <div className="lg:flex-1 mx-auto p-4">
                                     <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-photos-min.png" alt="device"/>
                                 </div>
-                                <div className="lg:flex-1 lg:text-left">
+                                <div className="lg:flex-1 lg:text-left p-4">
                                     <h3 className="font-extrabold">Photos</h3>
                                     <p className="mt-4">A wealth of memory can be stored within a single image. Look  back   on your fondest memories and experiences. Upload pictures, videos, gifs, and  music into   your journal entries with ease.</p>
                                 </div>
                             </div>
                         </Tab>
                         <Tab title="Maps">
-                            <div className="flex flex-row items-center flex-wrap">
-                              <div className="lg:flex-1 mx-auto">
+                            <div className="flex flex-row items-center flex-wrap animate-slidetwo">
+                              <div className="lg:flex-1 mx-auto p-4">
                                   <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-map-min.png" alt="device"/>
                               </div>
-                              <div className="lg:flex-1 lg:text-left">
+                              <div className="lg:flex-1 lg:text-left p-4">
                                   <h3 className="font-extrabold">Maps</h3>
                                   <p className="mt-4">Keep track of where you’ve been by tagging your locations in your   entries to make a travelogue or travel journal. Google Places and Apple Maps helps you    automatically tag your locations in your entries. See the media you have uploaded at   specific locations in your Atlas.</p>
                               </div>
                           </div>
                         </Tab>
                         <Tab title="Calendar">
-                            <div className="flex flex-row items-center flex-wrap">
-                              <div className="lg:flex-1 mx-auto">
+                            <div className="flex flex-row items-center flex-wrap animate-slidethree">
+                              <div className="lg:flex-1 mx-auto p-4">
                                   <img className="h-phone mx-auto" src="https://journey.cloud/home/phone/journey-views-calendar-min.png" alt="device"/>
                               </div>
-                              <div className="lg:flex-1 lg:text-left">
+                              <div className="lg:flex-1 lg:text-left p-4">
                                   <h3 className="font-extrabold">Calendar</h3>
                                   <p className="mt-4">Schedule out your time and plan your self-care. Use the Calendar feature to plan for the week or month and keep track of the entries you have been making.</p>
                               </div>
